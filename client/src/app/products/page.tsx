@@ -4,8 +4,8 @@ import { PlusCircleIcon, SearchIcon } from "lucide-react";
 import { useState, useEffect, useCallback, lazy, Suspense } from "react";
 import Header from "@/app/(components)/Header";
 import Rating from "@/app/(components)/Rating";
-import { useCreateProductMutation, useGetProductsQuery } from "../state";
 import { useDebounce } from "../utils/useDebounce";
+import { useCreateProductMutation, useGetProductsQuery } from "@/state";
 
 type ProductFormData = {
   name: string;

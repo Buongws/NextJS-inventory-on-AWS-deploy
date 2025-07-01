@@ -6,7 +6,7 @@ module.exports = {
       args: "run dev",
       env: {
         NODE_ENV: "development",
-        ENV_VAR1: "environtment-variable-1",
+        ENV_VAR1: "environment-variable",
       },
     },
   ],

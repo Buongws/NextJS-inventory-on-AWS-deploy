@@ -1,3 +1,4 @@
+import { useGetDashboardMetricsQuery } from "@/state";
 import { TrendingDown, TrendingUp } from "lucide-react";
 import numeral from "numeral";
 import React from "react";
@@ -9,7 +10,6 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { useGetDashboardMetricsQuery } from "../state/api";
 
 const CardPurchaseSummary = () => {
   const { data, isLoading } = useGetDashboardMetricsQuery();

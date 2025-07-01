@@ -1,7 +1,7 @@
 import { TrendingUp } from "lucide-react";
 import { Cell, Pie, PieChart, ResponsiveContainer } from "recharts";
-import { useGetDashboardMetricsQuery } from "../state/api";
-import { ExpenseByCategorySummary } from "../state/models/expense";
+import { useGetDashboardMetricsQuery } from "@/state";
+import { ExpenseByCategorySummary } from "@/state/models/expense";
 
 type ExpenseSums = {
   [category: string]: number;

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { TrendingUp } from "lucide-react";
-import { useGetDashboardMetricsQuery } from "../state/api";
 import {
   Bar,
   BarChart,
@@ -10,7 +9,8 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { SalesSummary } from "../state/constant";
+import { useGetDashboardMetricsQuery } from "@/state";
+import { SalesSummary } from "@/state/models/dashboard";
 
 const CardSalesSummary = () => {
   const { data, isLoading, isError } = useGetDashboardMetricsQuery();

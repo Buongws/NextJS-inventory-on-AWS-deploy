@@ -1,6 +1,6 @@
 import React from "react";
-import { Product } from "@/app/state/models/product";
 import Rating from "@/app/(components)/Rating";
+import { Product } from "@/state/models/product";
 
 export const ProductItem = React.memo(({ product }: { product: Product }) => {
   return (

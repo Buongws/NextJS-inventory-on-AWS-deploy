@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Header from "@/app/(components)/Header";
 import { DataGrid, GridColDef, GridPaginationModel } from "@mui/x-data-grid";
-import { useGetProductsQuery } from "../state";
+import { useGetProductsQuery } from "@/state";
 
 const columns: GridColDef[] = [
   { field: "productId", headerName: "ID", width: 90 },

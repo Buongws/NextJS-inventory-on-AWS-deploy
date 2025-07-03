@@ -12,6 +12,7 @@ import {
   SlidersHorizontal,
   User,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -80,12 +81,13 @@ const Sidebar = () => {
           isSidebarCollapsed ? "px-5" : "px-8"
         }`}
       >
-        <button
-          className="px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100"
-          onClick={toggleSidebar}
-        >
-          <Menu className="w-4 h-4" />
-        </button>
+        <Image
+          src="https://s3-inventorymanagement-tiendao.s3.ap-southeast-1.amazonaws.com/logo.png"
+          alt="edstock-logo"
+          width={27}
+          height={27}
+          className="rounded w-8"
+        />
         <h1
           className={`${
             isSidebarCollapsed ? "hidden" : "block"
@@ -93,6 +95,13 @@ const Sidebar = () => {
         >
           EDSTOCK
         </h1>
+
+        <button
+          className="md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100"
+          onClick={toggleSidebar}
+        >
+          <Menu className="w-4 h-4" />
+        </button>
       </div>
 
       {/* LINKS */}
@@ -136,11 +145,11 @@ const Sidebar = () => {
       </div>
 
       {/* FOOTER */}
-      <div>
+      <div className={`${isSidebarCollapsed ? "hidden" : "block"} mb-10`}>
         <p className="text-center text-xs text-gray-500">&copy; 2024 Edstock</p>
       </div>
     </div>
   );
 };
 
-export default React.memo(Sidebar);
+export default Sidebar;

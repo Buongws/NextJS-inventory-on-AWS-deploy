@@ -24,7 +24,15 @@ const CardPopularProducts = () => {
                 className="flex items-center justify-between gap-3 px-5 py-7 border-b"
               >
                 <div className="flex items-center gap-3">
-                  <div>img</div>
+                  <Image
+                    src={`https://s3-inventorymanagement-tiendao.s3.ap-southeast-1.amazonaws.com/product${
+                      Math.floor(Math.random() * 3) + 1
+                    }.png`}
+                    alt="Profile"
+                    width={50}
+                    height={50}
+                    className="rounded-full h-full object-cover"
+                  />
                   <div className="flex flex-col justify-between gap-1">
                     <div className="font-bold text-gray-700">
                       {product.name}
